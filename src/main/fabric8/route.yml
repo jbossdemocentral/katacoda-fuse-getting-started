@@ -1,0 +1,18 @@
+metadata:
+  name: summit2017-fuse-camel-sp
+spec:
+  host: people-service.apps.127.0.0.1.nip.io
+  to:
+    kind: Service
+    name: summit2017-fuse-camel-sp
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: people-service.apps.127.0.0.1.nip.io
+      conditions:
+        - type: Admitted
+          status: 'True'
+      wildcardPolicy: None
