@@ -60,7 +60,7 @@
             component="servlet"
             bindingMode="json"
             contextPath="/people-service/*"
-            port="8080"
+            port="8778"
             apiContextPath="/api-docs"
             apiContextListing="false"
             enableCORS="true">
