@@ -283,6 +283,9 @@
                 },
                 "ports": [
                   {
+                    "containerPort": 8080,
+                    "name": "tcp"
+                  },{
                     "containerPort": 8778,
                     "name": "jolokia"
                   }
