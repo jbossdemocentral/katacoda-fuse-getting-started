@@ -21,9 +21,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.redhat.jboss.fuse</groupId>
-    <artifactId>summit2017-fuse-camel-springboot</artifactId>
+    <artifactId>fuse-camel-sb-rest</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Summit 2017 :: Fuse :: Camel :: Spring-Boot</name>
+    <name>Fuse :: Camel :: Spring-Boot :: Rest API</name>
     <description>Camel REST route deployed to OpenShift on SpringBoot</description>
     <properties>
         <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
