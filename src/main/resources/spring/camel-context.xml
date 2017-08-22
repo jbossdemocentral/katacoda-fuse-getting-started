@@ -91,6 +91,7 @@
 
         <!-- defines the rest services using the context-path /user -->
         <rest
+            id="user_route"
             path="/user"
             consumes="application/json"
             produces="application/json"
@@ -99,6 +100,7 @@
             
             <!-- this is a rest GET to view an user by the given id -->
             <get
+                id="user_id_route"
                 uri="/{id}"
                 outType="com.redhat.jboss.fuse.User">
                 <description>Find user by id</description>
@@ -115,7 +117,9 @@
             </get>
 
             <!-- this is a rest PUT to create/update an user -->
-            <put type="com.redhat.jboss.fuse.User">
+            <put
+                id="user_put_route"
+                type="com.redhat.jboss.fuse.User">
                 <description>Updates or create a user</description>
                 <param
                     name="body"
@@ -126,6 +130,7 @@
 
             <!-- this is a rest GET to find all users -->
             <get
+                id="user_findall_route"
                 uri="/findAll"
                 outType="com.redhat.jboss.fuse.User[]">
                 <description>Find all users</description>
@@ -136,12 +141,15 @@
 
         <!-- defines the rest services using the context-path /echo -->
         <rest
+            id="user_test_route"
             path="/echo"
             consumes="application/text"
             produces="application/text">
             <description>Echo rest service</description>
 
-            <get uri="/ping">
+            <get
+                id="user_test_ping_route" 
+                uri="/ping">
                 <description>A ping service</description>
                 <route>
                     <transform>
@@ -152,7 +160,7 @@
 
         </rest>
 
-        <route>
+        <route id="user_id_processor_route">
             <from uri="direct:userId" />
             <to uri="bean:userService?method=getUser(${header.id})" />
             <filter>
